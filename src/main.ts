@@ -34,9 +34,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Discord Nuke</title>
-      <style>
-
-      </style>
     </head>
     <body>
       <form id="form">
@@ -57,11 +54,7 @@
         </div>
 
         <div>
-          <button id="guild-channel-autofill" type="button">Auto-fill</button>
-          <div>
-            <label for="guild">Guild:</label>
-            <input id="guild" name="guild" type="text" />
-          </div>
+          <button id="channel-autofill" type="button">Auto-fill</button>
           <div>
             <label for="channel">Channel ID: </span>
             <input id="channel" name="channel" type="text" />
@@ -90,8 +83,7 @@
   const tokenAutofillButton = getEl("token-autofill") as HTMLButtonElement;
   const authorInput = getEl("author") as HTMLInputElement;
   const authorAutofillButton = getEl("author-autofill") as HTMLButtonElement;
-  const guildInput = getEl("guild") as HTMLInputElement;
-  const guildAndChannelAutofillButton = getEl("guild-channel-autofill") as HTMLButtonElement;
+  const channelAutoFillButton = getEl("channel-autofill") as HTMLButtonElement;
   const channelInput = getEl("channel") as HTMLInputElement;
   const stopButton = getEl("stop") as HTMLButtonElement;
   const clearLogButton = getEl("clear-log") as HTMLButtonElement;
@@ -107,10 +99,10 @@
     authorInput.value = userId;
   });
 
-  guildAndChannelAutofillButton.addEventListener("click", () => {
+  channelAutoFillButton.addEventListener("click", () => {
     const matches = location.href.match(/channels\/([^\/]+)\/([^\/]+)/);
     if (matches) {
-      guildInput.value = matches[1];
+      // unused guildID at matches[1]
       channelInput.value = matches[2];
     } else {
       log(
