@@ -1,0 +1,1 @@
+deno --unstable run --allow-read --allow-write build.ts
