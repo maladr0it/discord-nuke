@@ -39,26 +39,20 @@
       <form id="form">
         <div>
           <button id="token-autofill" type="button">Auto-fill</button>
-          <div>
-            <label for="token">Token:</label>
-            <input id="token" name="token" type="text" />
-          </div>
+          <label for="token">Token:</label>
+          <input id="token" name="token" type="text" />
         </div>
 
         <div>
           <button id="author-autofill" type="button">Auto-fill</button>
-          <div>
-            <label for="author">Author:</label>
-            <input id="author" name="author" type="text" />
-          </div>
+          <label for="author">Author:</label>
+          <input id="author" name="author" type="text" />
         </div>
 
         <div>
           <button id="channel-autofill" type="button">Auto-fill</button>
-          <div>
-            <label for="channel">Channel ID: </span>
-            <input id="channel" name="channel" type="text" />
-          </div>
+          <label for="channel">Channel ID: </span>
+          <input id="channel" name="channel" type="text" />
         </div>
 
         <div>
